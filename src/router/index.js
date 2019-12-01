@@ -22,6 +22,11 @@ const routes = [
     path: '/cascader',
     name: 'cascader',
     component: () => import(/* webpackChunkName: "cascader" */ '../views/Cascader.vue')
+  },
+  {
+    path: '/table',
+    name: 'table',
+    component: () => import(/* webpackChunkName: "table" */ '../views/Table.vue')
   }
 ]
 
