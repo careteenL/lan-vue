@@ -41,7 +41,6 @@ export default {
         {
           title: "Address",
           key: "address",
-          
         }
       ],
       data1: [
