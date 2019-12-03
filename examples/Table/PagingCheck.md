@@ -5,7 +5,7 @@
 后台管理系统中，使用表格展示数据时，可能的需求是多项选择然后进行批量操作，也期望能翻页多选。
 
 ### 实现
-
+![paging-check-1](../../assets/paging-check-1.jpg)
 页面结构如下
 ```html
 <el-table
@@ -160,8 +160,16 @@ setSelectedRow () {
   })
 },
 ```
-
+![paging-check-2](../../assets/paging-check-2.jpg)
 以上实现了分页复选功能。
 
-所有代码存放在
-TODO
+所有代码存放在[@careteen/lan-vue](https://github.com/careteenL/lan-vue/blob/master/examples/Table/PagingCheck.vue)
+
+### 查看DEMO
+clone仓库并引入依赖
+```shell
+git clone git@github.com:careteenL/lan-vue.git
+npm install
+npm run serve
+```
+浏览器打开 http://localhost:8080/#/examples/pagingCheck 即可看到效果
