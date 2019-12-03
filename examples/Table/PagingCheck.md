@@ -172,4 +172,4 @@ git clone git@github.com:careteenL/lan-vue.git
 npm install
 npm run serve
 ```
-浏览器打开 http://localhost:8080/#/examples/pagingCheck 即可看到效果
+浏览器打开 [http://localhost:8080/#/examples/pagingCheck](http://localhost:8080/#/examples/pagingCheck) 即可看到效果
