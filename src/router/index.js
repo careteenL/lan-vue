@@ -27,6 +27,18 @@ const routes = [
     path: '/table',
     name: 'table',
     component: () => import(/* webpackChunkName: "table" */ '../views/Table.vue')
+  },
+  {
+    path: '/examples',
+    name: 'examples',
+    component: () => import(/* webpackChunkName: "examples" */ '../views/Examples.vue'),
+    children: [
+      {
+        path: 'pagingCheck',
+        name: '分页复选',
+        component: () => import(/* webpackChunkName: "examples" */ '../../examples/Table/PagingCheck.vue'),
+      }
+    ]
   }
 ]
 
