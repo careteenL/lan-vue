@@ -29,6 +29,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "table" */ '../views/Table.vue')
   },
   {
+    path: '/virtualScrollList',
+    name: 'virtualScrollList',
+    component: () => import(/* webpackChunkName: "virtualScrollList" */ '../views/VirtualScrollList.vue')
+  },
+  {
     path: '/examples',
     name: 'examples',
     component: () => import(/* webpackChunkName: "examples" */ '../views/Examples.vue'),

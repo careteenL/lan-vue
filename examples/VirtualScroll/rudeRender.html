@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>粗暴实现-如何渲染几万条数据并不卡住界面</title>
+</head>
+<body>
+  <ul>控件</ul>
+  <script>
+    // 插入十万条数据
+    const total = 100000
+    let ul = document.querySelector("ul")
+    console.time('loopTime')
+    console.time('loopAndRenderTime')
+    function add() {
+      // 优化性能，插入不会造成回流
+      const fragment = document.createDocumentFragment()
+      for (let i = 0; i < total; i++) {
+        const li = document.createElement("li")
+        li.innerText = Math.floor(Math.random() * total)
+        fragment.appendChild(li)
+      }
+      ul.appendChild(fragment)
+    }
+    add()
+    console.timeEnd('loopTime')
+    setTimeout(_ => {
+      console.timeEnd('loopAndRenderTime')
+    })
+  </script>
+</body>
+</html>
